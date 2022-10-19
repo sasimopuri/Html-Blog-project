@@ -41,12 +41,12 @@
             if the leaf is a goal node, return true 
             else return false 
         } else { 
-        for each child c of n { 
-            if solve(c) succeeds, return true 
-        } 
-        return false 
-        } 
-       }   </pre></font>
+            for each child c of n { 
+                if solve(c) succeeds, return true 
+            } 
+            return false 
+            } 
+        }   </pre></font>
     <p>Notice that the algorithm is expressed as a boolean function. This is essential to understanding the algorithm. If solve(n) is true, that means node n is part of a solution--that is, node n is one of the nodes on a path from the root to some goal node. We say that n is solvable. If solve(n) is false, then there is no path that includes n to any goal node.</p>
     <h3>How does this work?</h3>
     <ul>
@@ -63,7 +63,7 @@
             return false</pre></font>
     <p>Eventually the recursion will "bottom" out at a leaf node. If the leaf node is a goal node, it is solvable; if the leaf node is not a goal node, it is not solvable. This is our base case. In the above code, this is done by the lines</p>
 
-   <font size="4"    color="#007eb4"><pre>
+   <font size="4" color="#007eb4"><pre>
         if n is a leaf node {
             if the leaf is a goal node, return true 
             else return false 
